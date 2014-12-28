@@ -1,0 +1,42 @@
+<!doctype html5>
+
+<html>
+  <head>
+    <title>Chat</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:500,700,200,300' rel='stylesheet' type='text/css'>
+    <link href="/css/normalize.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/skeleton.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/main.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <div class="top-wrap">
+        <div class="messages-container">
+          <h1>Messages</h1>
+          <ul id="messages"></ul>
+        </div>
+        <div class="users-container">
+          <h1>Users</h1>
+          <ul id="users">
+            <li class="user no-users">No users connected.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="msg-input-container">
+        <form id="nickname-form" action="">
+          <input id="nick-input" placeholder="nickname"/>
+          <button class="btn" id="enter-btn">Enter</button>
+        </form>
+
+        <form id="msg-input-form" action="">
+          <input id="msg-input" autocomplete="off" />
+          <button class="btn" id="send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/client.js"></script>
+  </body>
+</html>

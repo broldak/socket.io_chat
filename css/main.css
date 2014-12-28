@@ -1,0 +1,107 @@
+body, html {
+  background-color: #212533;
+  height: 100%;
+}
+
+input {
+  font-family: inherit;
+  font-weight: 200;
+}
+
+.app-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.top-wrap {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.messages-container {
+  width: 70%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+  padding-top: 5px;
+}
+
+.users-container {
+  width: 20%;
+  display: inline-block;
+  vertical-align:top;
+  text-align: left;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.messages-container h1, .users-container h1 {
+  color: #ccc;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+#messages {
+  margin: 0;
+  height: 70%;
+  width: 95%;
+  overflow: scroll;
+  border: 1px solid #ccc;
+}
+
+.msg-input-container {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  background-color: #4d5b83;
+}
+
+#msg-input-form, #nickname-form {
+  margin-bottom: 5px;
+}
+
+#msg-input-form {
+  display: none;
+}
+
+#nick-input, #msg-input {
+  border: none;
+  background: transparent;
+  color: #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 70%;
+  margin-bottom: 1rem;
+  line-height: 32px;
+  outline: none;
+  font-size: 18px;
+}
+
+#send-btn, #enter-btn {
+  margin-left: 10px;
+  color: #ccc;
+}
+
+#send-btn:hover {
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+.chat-msg, .user {
+  color: #ccc;
+  list-style-type: none;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.user {
+  font-weight: 400;
+}
+
+.msg-nick {
+  font-weight: 400;
+}
