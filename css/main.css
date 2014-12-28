@@ -1,6 +1,10 @@
 body, html {
-  background-color: #212533;
+  background-color: #383b3b;
   height: 100%;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 input {
@@ -20,36 +24,97 @@ input {
 }
 
 .messages-container {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   display: inline-block;
   text-align: left;
   padding-top: 5px;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  background-color: #383b3b;
 }
 
 .users-container {
-  width: 20%;
-  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
   vertical-align:top;
   text-align: left;
-  border-left: 1px solid #ccc;
   height: 100%;
   padding-left: 20px;
+  float: left;
+  background-color: #1e1f24;
+  overflow: auto;
+  z-index: 0;
+}
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-size: contain;
+}
+
+label[for="nav-trigger"]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.5em;
+  height: 0.2em;
+  background: #ccc;
+  box-shadow: 
+    0 0.4em 0 0 #ccc,
+    0 0.8em 0 0 #ccc;
+}
+
+.nav-trigger:checked + label {
+    left: 17%;
+}
+ 
+.nav-trigger:checked ~ .messages-container {
+    left: 15%;
+}
+
+.nav-trigger + label, .messages-container {
+    transition: left 0.15s;
 }
 
 .messages-container h1, .users-container h1 {
   color: #ccc;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 5px;
   padding-top: 5px;
 }
 
+.messages-container h2 {
+  font-size: 20px;
+  color: #aaa;
+}
+
+.messages-inner {
+  margin: 0 auto;
+  width: 80%;
+}
+
 #messages {
-  margin: 0;
-  height: 70%;
-  width: 95%;
+  height: 82%;
   overflow: scroll;
-  border: 1px solid #ccc;
 }
 
 .msg-input-container {
@@ -58,7 +123,8 @@ input {
   width: 100%;
   padding-top: 20px;
   text-align: center;
-  background-color: #4d5b83;
+  background-color: #586998;
+  z-index: 2;
 }
 
 #msg-input-form, #nickname-form {
@@ -103,5 +169,11 @@ input {
 }
 
 .msg-nick {
+  font-weight: 400;
+  color: #b4bada;
+}
+
+.connected {
+  color: #b4bada;
   font-weight: 400;
 }

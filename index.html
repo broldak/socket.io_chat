@@ -11,17 +11,25 @@
   <body>
     <div class="app-wrapper">
       <div class="top-wrap">
-        <div class="messages-container">
-          <h1>Messages</h1>
-          <ul id="messages"></ul>
-        </div>
         <div class="users-container">
           <h1>Users</h1>
           <ul id="users">
             <li class="user no-users">No users connected.</li>
           </ul>
         </div>
+
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger"></label>
+
+        <div class="messages-container">
+          <div class="messages-inner">
+            <h1>Messages</h1>
+            <h2 class="empty-messages">Enter a nickname and send a message...</h2>
+            <ul id="messages"></ul>
+          </div>
+        </div>
       </div>
+
       <div class="msg-input-container">
         <form id="nickname-form" action="">
           <input id="nick-input" placeholder="nickname"/>
