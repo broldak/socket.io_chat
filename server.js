@@ -17,7 +17,7 @@ io.on('connection', function(socket){
   nickSet = false;
   console.log('a user connected');
 
-  console.log(userList);
+  //console.log(userList);
 
   io.emit('users', userList);
 
@@ -43,7 +43,7 @@ io.on('connection', function(socket){
     io.emit('disconnected', {nick: socket.nickname +' disconnected.',
                                         users: userList});
 
-    console.log(userDict);
+    //console.log(userDict);
 
   });
 

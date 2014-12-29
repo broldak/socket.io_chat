@@ -84,11 +84,11 @@ label[for="nav-trigger"]:before {
 }
 
 .nav-trigger:checked + label {
-    left: 17%;
+    left: 215px;
 }
  
 .nav-trigger:checked ~ .messages-container {
-    left: 15%;
+    left: 200px;
 }
 
 .nav-trigger + label, .messages-container {
