@@ -23,7 +23,7 @@ socket.on('users', function(data){
   }
 
   data.forEach(function(elem, index, arr){
-    $('#users').append($('<li class="user">').text(elem));
+    $('#users').append($('<li class="user">').text(elem.nick));
   });
 });
 
@@ -35,7 +35,19 @@ socket.on('connected', function(data){
   $('#messages').append($('<li class="chat-msg connected">').text(nick));
 
   users.forEach(function(elem, index, arr){
-    $('#users').append($('<li class="user">').text(elem));
+    $('#users').append($('<li class="user">').text(elem.nick));
+  });
+});
+
+socket.on('disconnected', function(data){
+  var nick = data.nick;
+  var users = data.users;
+
+  $('#users').text('');
+  $('#messages').append($('<li class="chat-msg disconnected">').text(nick));
+
+  users.forEach(function(elem, index, arr){
+    $('#users').append($('<li class="user">').text(elem.nick));
   });
 });
 

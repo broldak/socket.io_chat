@@ -177,3 +177,8 @@ label[for="nav-trigger"]:before {
   color: #b4bada;
   font-weight: 400;
 }
+
+.disconnected {
+  color: #da999d;
+  font-weight: 400;
+}
